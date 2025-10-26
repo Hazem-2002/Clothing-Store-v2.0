@@ -264,6 +264,7 @@ header footer p a:hover {
 }
 /* HERO */
 .hero {
+    margin-bottom: 50px;
     height: calc(100vh - 142px);
     display: flex;
     justify-content: center;
@@ -379,9 +380,11 @@ header footer p a:hover {
 }
 
 .new-arrival {
-    margin: 100px 0;
+    padding: 50px 0;
     display: grid;
     grid-template: 90px auto / auto;
+    background: linear-gradient(to bottom ,#FEFAF6 , #FAF5EB 15%, #FAF5EB 90% , #FEFAF6 95%);
+    /* FDF9F4 */
 }
 
 .new-arrival .header-section {
@@ -394,7 +397,7 @@ header footer p a:hover {
 }
 
 .new-arrival .header-section .title {
-    font-size: 22px;
+    font-size: 21px;
     font-weight: bold;
     color: #2B2D42;
     letter-spacing: 0.5px;
@@ -496,12 +499,10 @@ header footer p a:hover {
     background-color: #FFF;
     border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
     transition: all 0.4s ease;
     animation: fadeUp 0.8s ease forwards;
 }
-
-
 
 @keyframes fadeUp {
     0% {
@@ -522,7 +523,7 @@ header footer p a:hover {
 .new-arrival .container .items .item-image {
     position: relative;
     overflow: hidden;
-    background: linear-gradient(to bottom, #FAF5EB, transparent 60%);
+    background: linear-gradient(to top, #FAF5EB, transparent 25% , transparent 75% ,#FAF5EB);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -568,26 +569,26 @@ header footer p a:hover {
 
 .new-arrival .container .items .item-image .front-face .items-icons {
     position: absolute;
-    top: 50%;
+    bottom: 5%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translateX(-50%);
     width: 60%;
     opacity: 0;
     will-change: opacity;
-    transition: opacity 1.5s ease;
+    transition: opacity 1.1s ease 0.15s;
 }
 
 .new-arrival .container .items .item-image:hover .front-face .items-icons {
     opacity: 1;
 }
 
-.new-arrival .container .items .item-image .front-face .items-icons ul {
+.new-arrival .container .items .item-image .items-icons ul {
     display: flex;
     justify-content: space-between;
     gap: 10px;
 }
 
-.new-arrival .container .items .item-image .front-face .items-icons li {
+.new-arrival .container .items .item-image .items-icons li {
     flex: 1;
     background-color: rgba(255, 255, 255, 0.6);
     backdrop-filter: blur(8px);
@@ -596,13 +597,13 @@ header footer p a:hover {
     transition: transform 0.3s ease;
 }
 
-.new-arrival .container .items .item-image .front-face .items-icons li:hover {
+.new-arrival .container .items .item-image .items-icons li:hover {
     background-color: #C19A6B;
     transform: translateY(-5px);
     box-shadow: 0 6px 15px rgba(166, 123, 91, 0.4);
 }
 
-.new-arrival .container .items .item-image .front-face .items-icons li a {
+.new-arrival .container .items .item-image .items-icons li a {
     display: flex;
     width: 100%;
     height: 100%;
@@ -614,7 +615,7 @@ header footer p a:hover {
     transition: color 0.3s ease;
 }
 
-.new-arrival .container .items .item-image .front-face .items-icons li:hover a {
+.new-arrival .container .items .item-image .items-icons li:hover a {
     color: #fff;
 }
 
@@ -624,6 +625,7 @@ header footer p a:hover {
     flex-direction: column;
     gap: 8px;
     text-align: center;
+    background-color: #FEFAF6;
 }
 
 .new-arrival .container .items .item-details .title {
@@ -658,3 +660,58 @@ header footer p a:hover {
     font-weight: normal;
     text-decoration: line-through;
 }
+/* ------------------------------------------------------------------------------- */
+
+.home-wear .container .items .item-image .item-face {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-wear .container .items .item-image .item-face {
+    will-change: transform;
+    transition: transform 0.7s ease;
+}
+
+.home-wear .container .items .item-image:hover .item-face img{
+    transform: scale(1.3);
+}
+
+.home-wear  .container .items .item-image .item-face .items-icons {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    opacity: 0;
+    will-change: opacity;
+    transition: opacity 0.5s ease 0.05s;
+}
+
+.home-wear  .container .items .item-image:hover .item-face .items-icons {
+    opacity: 1;
+}
+
+/* ------------------------------------------------------------------------------- */
+
+.shoes .container .items .item-image .front-face {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    z-index: 1;
+    will-change: transform,opacity;
+    transform: translateY(-100%);
+    transition: transform 0.7s ease, opacity 0.7s ease;
+}
+
+.shoes .container .items .item-image:hover .front-face {
+    transform: translate(0);
+    opacity: 1;
+}
+
+.shoes .container .items .item-image .front-face .items-icons {
+    transition: opacity 1.1s ease 0.3s;
+}
+
+/* ------------------------------------------------------------------------------- */
