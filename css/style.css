@@ -691,6 +691,127 @@ header footer p a:hover {
 .home-wear  .container .items .item-image:hover .item-face .items-icons {
     opacity: 1;
 }
+/* ------------------------------------------------------------------------------- */
+
+.testimonial {
+    padding: 50px 0;
+    background: linear-gradient(to bottom ,#FEFAF6 , #FAF5EB 15%, #FAF5EB 90% , #FEFAF6 95%);
+    font-family: 'Poppins', sans-serif;
+}
+
+.testimonial .container { 
+    width: 70%; 
+    margin: 0 auto; 
+    padding: 15px 0; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: flex-start; 
+    row-gap: 40px; 
+    text-align: center;
+    position: relative;
+}
+
+.testimonial .container .arrow-left ,
+.testimonial .container .arrow-right {
+    position: absolute;
+    top: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    transform: translateY(-50%);
+    font-size: 22px;
+    color: #000;
+}
+
+.testimonial .container .arrow-left {
+    left: 0;
+}
+
+.testimonial .container .arrow-right {
+    right: 0;
+}
+
+.testimonial .title {
+    text-transform: capitalize;
+    font-size: 28px;
+    font-weight: 600;
+    color: #3c2f2f;
+    position: relative;
+}
+
+.testimonial .title::before {
+    content: "";
+    position: absolute;
+    top: 130%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    border-radius: 999px;
+    background-color: #DAB892;
+}
+
+.testimonial .desc {
+    max-width: 60%;
+    color: #6b5c4a;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    letter-spacing: 0.3px;
+    word-spacing: 1px;
+}
+
+.testimonial article {
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+    background: linear-gradient(to top left,#F2E1C8 ,#FAF5EB 20% , #FAF5EB 80% ,#F2E1C8);
+    padding: 25px 35px;
+    border-radius: 16px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial figure {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid #DAB892;
+    flex-shrink: 0;
+}
+
+.testimonial figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.testimonial figcaption {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    row-gap: 8px;
+}
+
+.testimonial figcaption h2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #3c2f2f;
+}
+
+.testimonial figcaption p {
+    font-size: 15px;
+    color: #888;
+}
 
 /* ------------------------------------------------------------------------------- */
 
